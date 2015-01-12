@@ -1,0 +1,10 @@
+################################################
+# DIRECTORIES REFERENCED IN babelnet.properties
+################################################
+
+# TO BE SET: the directory where the babelnet files are
+#
+# example:
+babelnet.dir=/home/m.aerabi/Dev/DataSets/BabelNet-2.5
+#
+# babelnet.dir=PUT_BABELNET_DIR 
