@@ -1,7 +1,7 @@
-## wordworks
+# wordworks
 WordWorks is a machine translation project, using BabelNet.
 
-# Install
+## Install
 1. First download BabelNet version 2.5, API and index, and also download WordNet 3.0.
 2. Pull a fresh copy of master branch into your Eclipse workspace.
 3. Copy `config` and `resources` from BabelNet API project into your working directory.
