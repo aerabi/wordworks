@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Droid;
+    src: url("Droid.Arabic.Naskh.Regular.ttf");
+}
+
+@font-face {
+    font-family: DroidBold;
+    src: url("Droid.Arabic.Naskh.Bold.ttf");
+}
+
 div {
 	position: fixed;
 }
@@ -5,5 +15,7 @@ div {
 a {
 	color:#6d86cf;
 	text-decoration:none;
-	font-family: Sans-Serif;
+	font-family: Droid;
+	font-size: 12pt;
+	cursor: hand;
 }
