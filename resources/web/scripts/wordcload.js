@@ -1,17 +1,44 @@
 var h = window.innerHeight;
 var w = window.innerWidth;
 
-for(i=0; i<30; i++)
+
+function fillTheCload(str)
 {
-	var divTop = Math.floor(Math.random() * h);
-	var divRight = Math.floor(Math.random() * w);
+	var list = str.split("<br>");
 	
-	// creat the word in space
-	var div = document.createElement('div');
-	div.id = 'd'+i;
-	div.className = 'word';
-	div.style.top = divTop + "px";
-	div.style.right = divRight + "px";
-	div.innerHTML = "<a>word" + i + "</a>";
-	document.getElementsByTagName('body')[0].appendChild(div);
+	for(i=0; i<list.length; i++)
+	{
+		var divTop = Math.floor(Math.random() * h);
+		var divRight = Math.floor(Math.random() * w);
+		
+		// creat the word in space
+		var div = document.createElement('div');
+		div.className = "word";
+		div.style.top = divTop + "px";
+		div.style.right = divRight + "px";
+		div.innerHTML = '<a onclick="fillWithWord(this.innerHTML)">' + list[i] + "</a>";
+		document.getElementsByTagName('body')[0].appendChild(div);
+	}
 }
+
+function fillWithURL(url)
+{
+	$.ajax({
+		url: url,
+		type: 'GET',
+		success: function(responce){
+			fillTheCload(responce);
+		},
+		error: function(xhr, textStatus, errorThrown){
+			alert('request failed\nxhr: ' + xhr.status + '\ntext status: ' + textStatus + '\nerror: ' + errorThrown);
+		}
+    });
+}
+
+function fillWithWord(word)
+{
+	$(".word").remove();
+	fillTheCload(word)
+}
+
+fillWithURL("test.php");

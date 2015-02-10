@@ -1,7 +1,7 @@
 <html lang="en">
 
 	<head>
-		<script src="scripts/jquery-2.0.2.min.js"></script>
+		<script src="scripts/jquery-2.1.0.min.js"></script>
 
 		<meta charset="utf-8">
 		<meta name="description" content="Word Cloud">
