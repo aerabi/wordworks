@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['word']))
+	$word = $_GET['word'];
+else
+	$word = "واژه";
+?>
+
 <html lang="en">
 
 	<head>
@@ -14,6 +21,9 @@
 	<body>
 	
 		<script src="scripts/wordcload.js"></script>
+		<script lang="javascript">
+			fillWithURL("synonym.php?word=<?php echo $word ?>");
+		</script>
 		
 	</body>
 

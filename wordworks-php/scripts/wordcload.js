@@ -40,5 +40,3 @@ function fillWithWord(word)
 	$(".word").remove();
 	fillWithURL("synonym.php?word=" + word)
 }
-
-fillWithURL("synonym.php?word=واژه");
