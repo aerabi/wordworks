@@ -1,5 +1,5 @@
-var h = window.innerHeight;
-var w = window.innerWidth;
+var h = window.innerHeight - 30;
+var w = window.innerWidth - 60;
 
 
 function fillTheCload(str)
