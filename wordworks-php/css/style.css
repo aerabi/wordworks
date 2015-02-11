@@ -13,9 +13,25 @@ div {
 }
 
 a {
-	color:#6d86cf;
+	color: #6d86cf;
 	text-decoration:none;
 	font-family: Droid;
 	font-size: 12pt;
 	cursor: hand;
+}
+
+input {
+	display: block;
+	width: 100%;
+	font-family: Droid;
+	font-size: 12pt;
+	direction: rtl;
+}
+
+iframe {
+	display: block;
+	width: 100%;
+	height: 90%;
+	margin-top: 10px;
+	border: 0;
 }
