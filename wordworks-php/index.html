@@ -10,9 +10,10 @@
 	</head>
 
 	<body>
-	
-		<input type="text" name="word" placeholder="واژه">
-		<iframe src="wordcload.php">
+		
+		<script src="scripts/index.js"></script>
+		<input type="text" name="word" onkeypress="updateCload(this.value)" placeholder="واژه">
+		<iframe id="cload" src="wordcload.php">
 		
 	</body>
 
