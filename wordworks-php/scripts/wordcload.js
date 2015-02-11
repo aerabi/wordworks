@@ -38,7 +38,7 @@ function fillWithURL(url)
 function fillWithWord(word)
 {
 	$(".word").remove();
-	fillTheCload(word)
+	fillWithURL("synonym.php?word=" + word)
 }
 
-fillWithURL("test.php");
+fillWithURL("synonym.php?word=واژه");
