@@ -17,3 +17,11 @@ $(document).mousewheel(function(event) {
 	scale('html', scaleVal);
 	scale('.word', 1 - 0.5 * Math.log(scaleVal));
 });
+
+$(document).mousemove(function( event ) {
+	$('html').css('transform-origin', event.pageX + " " + event.pageY);
+	$('html').css('-o-transform-origin', event.pageX + " " + event.pageY);
+	$('html').css('-ms-transform-origin', event.pageX + " " + event.pageY);
+	$('html').css('-moz-transform-origin', event.pageX + " " + event.pageY);
+	$('html').css('-webkit-transform-origin', event.pageX + " " + event.pageY);
+});
