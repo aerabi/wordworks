@@ -25,16 +25,16 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 1. Go to `xampp/apache/conf/extra/httpd-vhosts.conf`.
 2. Uncomment line 19 (`NameVirtualHost *:80`).
 3. Uncomment the block starting at line ~36, and change it to this:
-```
-<VirtualHost *:80>
-    DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
-    ServerName wordworks.localhost
-	<Directory B:/Documents/Dev/Git/git/wordworks>
-        Order allow,deny
-        Allow from all
-    </Directory>
-</VirtualHost>
-```
+	```
+	<VirtualHost *:80>
+		DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
+		ServerName wordworks.localhost
+		<Directory B:/Documents/Dev/Git/git/wordworks>
+			Order allow,deny
+			Allow from all
+		</Directory>
+	</VirtualHost>
+	```
 4. Save it.
 5. Go to `Windows/System32/drivers/etc/hosts`.
 6. Add `127.0.0.1		wordworks.localhost` to the end of file (before the Spybot - Search & Destroy stuff if you have that installed).
@@ -42,12 +42,12 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 8. Restart Apache.
 9. Go to `localhost/wordworks-php`.
 10. If it says `Access forbidden!`, go to `httpd.conf` and find `<Directory />`. Then replace the whole block with this:
-```
-<Directory />
-    Options FollowSymLinks
-    AllowOverride All
-    Order deny,allow
-    Allow from all
-</Directory>
-```
+	```
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride All
+		Order deny,allow
+		Allow from all
+	</Directory>
+	```
 11. Restart Apache, and you're good to go.
