@@ -30,6 +30,8 @@ input {
 	display: block;
 	width: 100%;
 	direction: rtl;
+	font-family: Droid;
+	font-size: 12pt;
 }
 
 iframe {
