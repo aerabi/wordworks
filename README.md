@@ -26,14 +26,16 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 2. Uncomment line 19 (`NameVirtualHost *:80`).
 3. Uncomment the block starting at line ~36, and change it to this:
 
-		<VirtualHost *:80>
-			DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
-			ServerName wordworks.localhost
-			<Directory B:/Documents/Dev/Git/git/wordworks>
-				Order allow,deny
-				Allow from all
-			</Directory>
-		</VirtualHost>
+```
+<VirtualHost *:80>
+	DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
+	ServerName wordworks.localhost
+	<Directory B:/Documents/Dev/Git/git/wordworks>
+		Order allow,deny
+		Allow from all
+	</Directory>
+</VirtualHost>
+```
 
 4. Save it.
 5. Go to `Windows/System32/drivers/etc/hosts`.
