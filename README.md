@@ -26,16 +26,16 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 2. Uncomment line 19 (`NameVirtualHost *:80`).
 3. Uncomment the block starting at line ~36, and change it to this:
 
-```
-<VirtualHost *:80>
-	DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
-	ServerName wordworks.localhost
-	<Directory B:/Documents/Dev/Git/git/wordworks>
-		Order allow,deny
-		Allow from all
-	</Directory>
-</VirtualHost>
-```
+	```
+	<VirtualHost *:80>
+		DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
+		ServerName wordworks.localhost
+		<Directory B:/Documents/Dev/Git/git/wordworks>
+			Order allow,deny
+			Allow from all
+		</Directory>
+	</VirtualHost>
+	```
 
 4. Save it.
 5. Go to `Windows/System32/drivers/etc/hosts`.
@@ -43,15 +43,14 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 7. Save it. (You might have to save it to the desktop, change the permissions on the old hosts file (right click > properties), and copy the new one into the directory over the old one (or rename the old one) if you are using Vista and have trouble).
 8. Restart Apache.
 9. Go to `localhost/wordworks-php`.
-10. If it says `Access forbidden!`, go to `httpd.conf` and find `<Directory />`. Then replace the whole block with this:
 
-	```
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride All
-		Order deny,allow
-		Allow from all
-	</Directory>
-	```
-
-11. Restart Apache, and you're good to go.
+If it says `Access forbidden!`, go to `httpd.conf` and find `<Directory />`. Then replace the whole block with this:
+```
+<Directory />
+    Options FollowSymLinks
+    AllowOverride All
+    Order deny,allow
+    Allow from all
+</Directory>
+```
+Restart Apache, and you're good to go.
