@@ -15,7 +15,7 @@ $(document).mousewheel(function(event) {
 		scaleVal = 0.8;
 	
 	scale('html', scaleVal);
-	scale('.word', 1 - 0.5 * Math.log(scaleVal));
+	scale('.word', 1 / (1 + Math.log(scaleVal)));
 });
 
 $(document).mousemove(function( event ) {
