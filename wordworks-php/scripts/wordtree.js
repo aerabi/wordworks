@@ -40,7 +40,7 @@ function fillTheTree(str, word, x, y, parent)
                 target:parent,
                 endpoint:[ "Rectangle", { width:2, height:2 } ],
 				anchors:["Right", "Left"],
-				paintStyle:{lineWidth:2, strokeStyle:'rgb(243,18,18)'}
+				paintStyle:{lineWidth:1, strokeStyle:'rgb(243,18,18)'}
             });
         });
 	}
