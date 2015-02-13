@@ -25,3 +25,9 @@ $(document).mousemove(function( event ) {
 	$('html').css('-moz-transform-origin', event.pageX + " " + event.pageY);
 	$('html').css('-webkit-transform-origin', event.pageX + " " + event.pageY);
 });
+
+$('html').click(function(){
+	scaleVal = 1.0;
+	scale('html', scaleVal);
+	scale('.word', scaleVal);
+});

@@ -61,7 +61,7 @@ function fillWithURL(url, word, x, y, id)
 }
 
 function fillWithWord(word, x, y, id)
-{
+{	
 	if(x == -1) 
 		x = 0;
 	if(y == -1)
