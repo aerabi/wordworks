@@ -25,16 +25,16 @@ For Windows, we assume that your project directory is `B:/Documents/Dev/Git/git/
 * Go to `xampp/apache/conf/extra/httpd-vhosts.conf`.
 * Uncomment line 19 (`NameVirtualHost *:80`).
 * Uncomment the block starting at line ~36, and change it to this:
-```
-<VirtualHost *:80>
-    DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
-    ServerName wordworks.localhost
-	<Directory B:/Documents/Dev/Git/git/wordworks>
-        Order allow,deny
-        Allow from all
-    </Directory>
-</VirtualHost>
-```
+	```
+	<VirtualHost *:80>
+		DocumentRoot "B:/Documents/Dev/Git/git/wordworks"
+		ServerName wordworks.localhost
+		<Directory B:/Documents/Dev/Git/git/wordworks>
+			Order allow,deny
+			Allow from all
+		</Directory>
+	</VirtualHost>
+	```
 * Save it.
 * Go to `Windows/System32/drivers/etc/hosts`.
 * Add `127.0.0.1		wordworks.localhost` to the end of file (before the Spybot - Search & Destroy stuff if you have that installed).
