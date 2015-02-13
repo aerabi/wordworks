@@ -3,7 +3,7 @@ var w = window.innerWidth - 60;
 
 function fillTheTree(str, word, x, y, parent)
 {
-	var list = str.split("<br>");
+	var list = str.substring(0, str.length-4).split("<br>");
 	
 	// finding radius
 	var r = Math.min(h - y, Math.min(w - x, y));
@@ -11,8 +11,8 @@ function fillTheTree(str, word, x, y, parent)
 	for(i=0; i<list.length; i++)
 	{
 		var offset = 5;
-		var divTop = y + r * Math.cos(Math.PI * (i + offset) / (list.length + 2 * offset));
-		var divRight = x + r * Math.sin(Math.PI * (i + offset) / (list.length + 2 * offset));
+		var divTop = y + r * Math.cos(Math.PI * (i + offset) / (list.length + 2 * offset -1));
+		var divRight = x + r * Math.sin(Math.PI * (i + offset) / (list.length + 2 * offset -1));
 		
 		// creat the word in space
 		var div = document.createElement('div');
