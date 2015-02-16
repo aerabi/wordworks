@@ -21,7 +21,7 @@ else
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	</head>
 
-	<body>
+	<body oncontextmenu="return false;">
 	
 		<script src="scripts/wordtree.js"></script>
 		<script src="scripts/zoom.js"></script>
